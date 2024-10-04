@@ -4,7 +4,7 @@ import {
   FaXbox,
   FaApple,
   FaLinux,
-  FaAndroid
+  FaAndroid,
 } from "react-icons/fa";
 import { MdPhoneIphone } from "react-icons/md";
 import { SiNintendo } from "react-icons/si";
@@ -17,7 +17,7 @@ interface Props {
   platforms: Platform[];
 }
 
-const PlatformIconList = ({ platforms }: Props) => {
+const PlatformIconList = ({ platforms = [] }: Props) => {
   const iconMap: { [key: string]: IconType } = {
     pc: FaWindows,
     playstation: FaPlaystation,
@@ -27,7 +27,7 @@ const PlatformIconList = ({ platforms }: Props) => {
     linux: FaLinux,
     ios: MdPhoneIphone,
     web: BsGlobe,
-    android: FaAndroid
+    android: FaAndroid,
   };
 
   return (
